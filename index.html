@@ -20,9 +20,7 @@
     --error:      #B84040;
     --radius:     10px;
   }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
@@ -30,8 +28,6 @@
     min-height: 100vh;
     padding: 0 0 60px;
   }
-
-  /* ── TOP BANNER ── */
   .banner {
     background: var(--blue);
     padding: 28px 40px 24px;
@@ -64,8 +60,6 @@
     text-align: right;
     line-height: 1.6;
   }
-
-  /* ── ROLE CARD ── */
   .role-card {
     background: var(--surface);
     border-bottom: 3px solid var(--accent);
@@ -100,15 +94,7 @@
   }
   .role-meta span::before { content: '· '; color: var(--accent); font-weight: 700; }
   .role-meta span:first-child::before { content: ''; }
-
-  /* ── MAIN LAYOUT ── */
-  .wrap {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 40px 20px 0;
-  }
-
-  /* ── INTRO NOTE ── */
+  .wrap { max-width: 780px; margin: 0 auto; padding: 40px 20px 0; }
   .intro {
     background: var(--blue-light);
     border-left: 4px solid var(--blue);
@@ -119,8 +105,6 @@
     line-height: 1.6;
     margin-bottom: 32px;
   }
-
-  /* ── SECTION DIVIDER ── */
   .section-label {
     display: flex;
     align-items: center;
@@ -138,7 +122,6 @@
     flex-shrink: 0;
   }
   .section-label h2 {
-    font-family: 'DM Sans', sans-serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -151,8 +134,6 @@
     height: 1px;
     background: var(--blue-mid);
   }
-
-  /* ── FORM CARD ── */
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -165,7 +146,6 @@
     box-shadow: 0 0 0 3px rgba(31,78,150,0.12);
     border-color: var(--blue);
   }
-
   .q-num {
     font-size: 10.5px;
     font-weight: 600;
@@ -187,13 +167,7 @@
     margin-bottom: 10px;
     font-style: italic;
   }
-
-  /* ── INPUTS ── */
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select,
-  textarea {
+  input[type="text"], input[type="email"], input[type="tel"], select, textarea {
     width: 100%;
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
@@ -206,26 +180,10 @@
     outline: none;
     resize: vertical;
   }
-  input:focus, select:focus, textarea:focus {
-    border-color: var(--blue);
-    background: #fff;
-  }
-  input.error, select.error, textarea.error {
-    border-color: var(--error);
-  }
-  .err-msg {
-    font-size: 12px;
-    color: var(--error);
-    margin-top: 5px;
-    display: none;
-  }
-
-  /* radio group */
-  .radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+  input:focus, select:focus, textarea:focus { border-color: var(--blue); background: #fff; }
+  input.error, select.error, textarea.error { border-color: var(--error); }
+  .err-msg { font-size: 12px; color: var(--error); margin-top: 5px; display: none; }
+  .radio-group { display: flex; flex-direction: column; gap: 8px; }
   .radio-opt {
     display: flex;
     align-items: center;
@@ -240,15 +198,8 @@
   .radio-opt:hover { border-color: var(--blue); background: var(--blue-light); }
   .radio-opt input[type="radio"] { accent-color: var(--blue); width: 16px; height: 16px; }
   .radio-opt.selected { border-color: var(--blue); background: var(--blue-light); }
-
-  /* inline pair */
-  .input-pair {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
+  .input-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 520px) { .input-pair { grid-template-columns: 1fr; } }
-
   label.field-label {
     display: block;
     font-size: 12px;
@@ -258,8 +209,6 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
-
-  /* ── PDPA BOX ── */
   .pdpa {
     background: #F5F3EE;
     border: 1px solid var(--border);
@@ -281,8 +230,6 @@
     cursor: pointer;
   }
   .pdpa-check input { accent-color: var(--blue); margin-top: 2px; width: 15px; height: 15px; flex-shrink: 0; }
-
-  /* ── SUBMIT ── */
   .submit-wrap { text-align: center; margin-top: 10px; }
   .btn-submit {
     background: var(--blue);
@@ -300,13 +247,7 @@
   .btn-submit:hover { background: #163d7a; transform: translateY(-1px); }
   .btn-submit:active { transform: translateY(0); }
   .btn-submit:disabled { background: #9aaabf; cursor: not-allowed; transform: none; }
-
-  /* ── SUCCESS STATE ── */
-  .success-screen {
-    display: none;
-    text-align: center;
-    padding: 60px 20px;
-  }
+  .success-screen { display: none; text-align: center; padding: 60px 20px; }
   .success-screen .tick {
     width: 64px; height: 64px;
     background: var(--success);
@@ -316,20 +257,8 @@
     font-size: 28px;
     color: #fff;
   }
-  .success-screen h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 26px;
-    margin-bottom: 12px;
-  }
-  .success-screen p {
-    font-size: 14px;
-    color: var(--muted);
-    max-width: 420px;
-    margin: 0 auto;
-    line-height: 1.65;
-  }
-
-  /* ── FOOTER ── */
+  .success-screen h2 { font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; }
+  .success-screen p { font-size: 14px; color: var(--muted); max-width: 420px; margin: 0 auto; line-height: 1.65; }
   .page-footer {
     background: var(--blue);
     color: rgba(255,255,255,0.6);
@@ -340,40 +269,22 @@
     line-height: 1.7;
   }
   .page-footer strong { color: rgba(255,255,255,0.85); }
-
-  /* progress bar */
-  .progress-bar-wrap {
-    height: 3px;
-    background: var(--blue-mid);
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-  }
-  #progress-bar {
-    height: 100%;
-    background: var(--accent);
-    width: 0%;
-    transition: width 0.3s;
-  }
+  .progress-bar-wrap { height: 3px; background: var(--blue-mid); position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+  #progress-bar { height: 100%; background: var(--accent); width: 0%; transition: width 0.3s; }
 </style>
 </head>
 <body>
 
 <div class="progress-bar-wrap"><div id="progress-bar"></div></div>
 
-<!-- BANNER -->
 <div class="banner">
   <div class="banner-logo">
     The Talent People
     <span>Specialist Recruitment · Singapore</span>
   </div>
-  <div class="banner-ea">
-    EA License: 24C2589<br/>
-    UEN: 202432943E
-  </div>
+  <div class="banner-ea">EA License: 24C2589<br/>UEN: 202432943E</div>
 </div>
 
-<!-- ROLE CARD -->
 <div class="role-card">
   <div class="role-tag">Candidate Screening</div>
   <div class="role-title">IT Sales &amp; Business Development Manager</div>
@@ -387,26 +298,24 @@
 
 <div class="wrap">
 
-  <!-- SUCCESS SCREEN (hidden by default) -->
   <div class="success-screen" id="success-screen">
     <div class="tick">✓</div>
     <h2>Submission Received</h2>
     <p>Thank you for taking the time to complete this screening. Our team at The Talent People will review your responses and be in touch if there is a fit.</p>
   </div>
 
-  <!-- FORM -->
-  <form id="screen-form" novalidate>
+  <form id="screen-form" action="https://formspree.io/f/mnjgkzkd" method="POST" novalidate>
+
+    <!-- Formspree meta fields -->
+    <input type="hidden" name="_subject" value="New Screening Submission: IT Sales & BD Manager"/>
+    <input type="hidden" name="_next" value=""/>
 
     <div class="intro">
       This short screening takes approximately 10 minutes. Please answer each question as specifically as you can — your responses go directly to our recruitment team and are treated in confidence.
     </div>
 
-    <!-- ── SECTION 1: PERSONAL DETAILS ── -->
-    <div class="section-label">
-      <div class="num">0</div>
-      <h2>Your Details</h2>
-    </div>
-
+    <!-- SECTION 0 -->
+    <div class="section-label"><div class="num">0</div><h2>Your Details</h2></div>
     <div class="card">
       <div class="input-pair">
         <div>
@@ -416,7 +325,7 @@
         </div>
         <div>
           <label class="field-label" for="email">Email Address *</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required/>
+          <input type="email" id="email" name="_replyto" placeholder="your@email.com" required/>
           <div class="err-msg" id="err-email">Please enter a valid email address.</div>
         </div>
       </div>
@@ -433,17 +342,14 @@
       </div>
     </div>
 
-    <!-- ── SECTION 1: SALES EXPERIENCE ── -->
-    <div class="section-label">
-      <div class="num">1</div>
-      <h2>Sales Experience</h2>
-    </div>
+    <!-- SECTION 1 -->
+    <div class="section-label"><div class="num">1</div><h2>Sales Experience</h2></div>
 
     <div class="card">
       <div class="q-num">Question 1</div>
       <div class="q-text">How many years of direct IT sales experience do you have, and what types of solutions have you sold?</div>
       <div class="q-hint">e.g. hardware, managed services, cloud, datacentre infrastructure, enterprise IT</div>
-      <textarea name="q1" id="q1" rows="4" placeholder="Describe your experience and the types of IT solutions you have sold..." required></textarea>
+      <textarea name="q1_it_sales_experience" id="q1" rows="4" placeholder="Describe your experience and the types of IT solutions you have sold..." required></textarea>
       <div class="err-msg" id="err-q1">Please answer this question.</div>
     </div>
 
@@ -451,7 +357,7 @@
       <div class="q-num">Question 2</div>
       <div class="q-text">What percentage of your current or most recent pipeline was focused on SMB clients vs mid-market or enterprise?</div>
       <div class="q-hint">e.g. 70% SMB / 30% mid-market</div>
-      <textarea name="q2" id="q2" rows="3" placeholder="Describe your pipeline split and the types of accounts you typically work with..." required></textarea>
+      <textarea name="q2_pipeline_split" id="q2" rows="3" placeholder="Describe your pipeline split and the types of accounts you typically work with..." required></textarea>
       <div class="err-msg" id="err-q2">Please answer this question.</div>
     </div>
 
@@ -459,25 +365,22 @@
       <div class="q-num">Question 3</div>
       <div class="q-text">Walk us through a recent deal you closed end-to-end — from prospecting to signed contract.</div>
       <div class="q-hint">Include how you identified the opportunity, your approach, and the outcome.</div>
-      <textarea name="q3" id="q3" rows="5" placeholder="Describe the deal, your role, and how you progressed it to close..." required></textarea>
+      <textarea name="q3_deal_example" id="q3" rows="5" placeholder="Describe the deal, your role, and how you progressed it to close..." required></textarea>
       <div class="err-msg" id="err-q3">Please answer this question.</div>
     </div>
 
-    <!-- ── SECTION 2: INDUSTRY BACKGROUND ── -->
-    <div class="section-label">
-      <div class="num">2</div>
-      <h2>Industry Background</h2>
-    </div>
+    <!-- SECTION 2 -->
+    <div class="section-label"><div class="num">2</div><h2>Industry Background</h2></div>
 
     <div class="card">
       <div class="q-num">Question 4</div>
       <div class="q-text">Have you worked at or sold through a System Integrator (SI) or Managed Services Provider?</div>
-      <div class="radio-group" style="margin-bottom:14px" id="q4-radio">
-        <label class="radio-opt"><input type="radio" name="q4_yn" value="yes" required/> Yes</label>
-        <label class="radio-opt"><input type="radio" name="q4_yn" value="no"/> No</label>
+      <div class="radio-group" style="margin-bottom:14px">
+        <label class="radio-opt"><input type="radio" name="q4_si_background" value="Yes" required/> Yes</label>
+        <label class="radio-opt"><input type="radio" name="q4_si_background" value="No"/> No</label>
       </div>
       <div class="q-hint">If yes, please name the company and describe your role.</div>
-      <textarea name="q4_detail" id="q4-detail" rows="3" placeholder="Company name and role description..."></textarea>
+      <textarea name="q4_si_detail" id="q4-detail" rows="3" placeholder="Company name and role description..."></textarea>
       <div class="err-msg" id="err-q4">Please select an option.</div>
     </div>
 
@@ -485,35 +388,29 @@
       <div class="q-num">Question 5</div>
       <div class="q-text">Do you have experience selling datacentre infrastructure or enterprise IT solutions?</div>
       <div class="q-hint">Please give a specific example — product/solution type, customer segment, and deal size if possible.</div>
-      <textarea name="q5" id="q5" rows="4" placeholder="Describe the solution, customer type, and outcome..." required></textarea>
+      <textarea name="q5_datacentre_experience" id="q5" rows="4" placeholder="Describe the solution, customer type, and outcome..." required></textarea>
       <div class="err-msg" id="err-q5">Please answer this question.</div>
     </div>
 
-    <!-- ── SECTION 3: NETWORK & MARKET ── -->
-    <div class="section-label">
-      <div class="num">3</div>
-      <h2>Network &amp; Market</h2>
-    </div>
+    <!-- SECTION 3 -->
+    <div class="section-label"><div class="num">3</div><h2>Network &amp; Market</h2></div>
 
     <div class="card">
       <div class="q-num">Question 6</div>
       <div class="q-text">Do you currently hold an active client network within the SMB or mid-market space in Singapore?</div>
       <div class="q-hint">How recently have you been in contact with these accounts, and roughly how many decision-maker relationships do you maintain?</div>
-      <textarea name="q6" id="q6" rows="4" placeholder="Describe the nature and recency of your Singapore network..." required></textarea>
+      <textarea name="q6_sg_network" id="q6" rows="4" placeholder="Describe the nature and recency of your Singapore network..." required></textarea>
       <div class="err-msg" id="err-q6">Please answer this question.</div>
     </div>
 
-    <!-- ── SECTION 4: BUSINESS DEVELOPMENT ── -->
-    <div class="section-label">
-      <div class="num">4</div>
-      <h2>Business Development</h2>
-    </div>
+    <!-- SECTION 4 -->
+    <div class="section-label"><div class="num">4</div><h2>Business Development</h2></div>
 
     <div class="card">
       <div class="q-num">Question 7</div>
       <div class="q-text">Can you describe a market or account segment you have developed from scratch?</div>
       <div class="q-hint">What was your approach to identifying prospects, building relationships, and converting them into paying clients?</div>
-      <textarea name="q7" id="q7" rows="5" placeholder="Describe the segment, your strategy, and the results..." required></textarea>
+      <textarea name="q7_bd_from_scratch" id="q7" rows="5" placeholder="Describe the segment, your strategy, and the results..." required></textarea>
       <div class="err-msg" id="err-q7">Please answer this question.</div>
     </div>
 
@@ -521,14 +418,11 @@
       <div class="q-num">Question 8</div>
       <div class="q-text">Have you been involved in developing new business outside of Singapore, within the APAC region?</div>
       <div class="q-hint">If yes, which markets and what was your role in that expansion?</div>
-      <textarea name="q8" id="q8" rows="4" placeholder="Describe the markets, your involvement, and the outcomes..."></textarea>
+      <textarea name="q8_apac_bd" id="q8" rows="4" placeholder="Describe the markets, your involvement, and the outcomes..."></textarea>
     </div>
 
-    <!-- ── SECTION 5: PRACTICAL ── -->
-    <div class="section-label">
-      <div class="num">5</div>
-      <h2>Practical</h2>
-    </div>
+    <!-- SECTION 5 -->
+    <div class="section-label"><div class="num">5</div><h2>Practical</h2></div>
 
     <div class="card">
       <div class="q-num">Question 9</div>
@@ -536,12 +430,12 @@
       <div class="input-pair">
         <div>
           <label class="field-label" for="current-salary">Current / Last Drawn (SGD/month) *</label>
-          <input type="text" id="current-salary" name="current_salary" placeholder="e.g. 8,500" required/>
+          <input type="text" id="current-salary" name="current_salary" placeholder="e.g. 6,500" required/>
           <div class="err-msg" id="err-current-salary">Please enter your current salary.</div>
         </div>
         <div>
           <label class="field-label" for="expected-salary">Expected Base (SGD/month) *</label>
-          <input type="text" id="expected-salary" name="expected_salary" placeholder="e.g. 12,000" required/>
+          <input type="text" id="expected-salary" name="expected_salary" placeholder="e.g. 8,500" required/>
           <div class="err-msg" id="err-expected-salary">Please enter your expected salary.</div>
         </div>
       </div>
@@ -550,22 +444,22 @@
     <div class="card">
       <div class="q-num">Question 10</div>
       <div class="q-text">What is your current notice period?</div>
-      <div class="radio-group" id="q10-radio">
-        <label class="radio-opt"><input type="radio" name="notice" value="Immediate" required/> Immediate</label>
-        <label class="radio-opt"><input type="radio" name="notice" value="1 month"/> 1 month</label>
-        <label class="radio-opt"><input type="radio" name="notice" value="2 months"/> 2 months</label>
-        <label class="radio-opt"><input type="radio" name="notice" value="3 months"/> 3 months</label>
-        <label class="radio-opt"><input type="radio" name="notice" value="More than 3 months"/> More than 3 months</label>
+      <div class="radio-group">
+        <label class="radio-opt"><input type="radio" name="notice_period" value="Immediate" required/> Immediate</label>
+        <label class="radio-opt"><input type="radio" name="notice_period" value="1 month"/> 1 month</label>
+        <label class="radio-opt"><input type="radio" name="notice_period" value="2 months"/> 2 months</label>
+        <label class="radio-opt"><input type="radio" name="notice_period" value="3 months"/> 3 months</label>
+        <label class="radio-opt"><input type="radio" name="notice_period" value="More than 3 months"/> More than 3 months</label>
       </div>
       <div class="err-msg" id="err-notice">Please select your notice period.</div>
     </div>
 
-    <!-- ── PDPA ── -->
+    <!-- PDPA -->
     <div class="pdpa">
       <strong>Data Protection Notice</strong><br/>
       Your personal data is collected by <strong>The Talent People Pte. Ltd.</strong> (EA License: 24C2589) solely for the purpose of evaluating your suitability for this role and related recruitment activities. Your data will be treated with strict confidentiality in accordance with the <strong>Singapore Personal Data Protection Act (PDPA)</strong>. It will not be shared with any third party without your consent, except where required to progress your application. You may withdraw consent or request access to your data at any time by contacting us.
-      <label class="pdpa-check" id="pdpa-check-label">
-        <input type="checkbox" id="pdpa-consent" name="pdpa_consent" required/>
+      <label class="pdpa-check">
+        <input type="checkbox" id="pdpa-consent" name="pdpa_consent" value="Agreed" required/>
         I have read and agree to the above data protection notice. *
       </label>
       <div class="err-msg" id="err-pdpa">You must agree to the data protection notice to submit.</div>
@@ -578,7 +472,6 @@
   </form>
 </div>
 
-<!-- FOOTER -->
 <div class="page-footer">
   <strong>The Talent People Pte. Ltd.</strong> · EA License: 24C2589 · UEN: 202432943E<br/>
   75 High St, Singapore 179435 · TheTalentPeople.co<br/>
@@ -586,7 +479,7 @@
 </div>
 
 <script>
-  // ── Radio option highlight ────────────────────────────────────────────
+  // Radio highlight
   document.querySelectorAll('.radio-opt input[type="radio"]').forEach(r => {
     r.addEventListener('change', () => {
       const group = r.closest('.radio-group');
@@ -595,32 +488,21 @@
     });
   });
 
-  // ── Progress bar ─────────────────────────────────────────────────────
-  const allRequired = () => document.querySelectorAll('[required]');
+  // Progress bar
   function updateProgress() {
-    const fields = allRequired();
-    let filled = 0;
-    fields.forEach(f => {
-      if (f.type === 'radio') {
-        const name = f.name;
-        if (document.querySelector(`input[name="${name}"]:checked`)) filled++;
-      } else if (f.type === 'checkbox') {
-        if (f.checked) filled++;
-      } else if (f.value.trim()) filled++;
-    });
-    // dedupe radio groups
-    const radioNames = new Set([...fields].filter(f=>f.type==='radio').map(f=>f.name));
-    const total = [...fields].filter(f=>f.type!=='radio').length + radioNames.size;
+    const fields = [...document.querySelectorAll('#screen-form [required]')];
+    const radioNames = new Set(fields.filter(f => f.type === 'radio').map(f => f.name));
+    const total = fields.filter(f => f.type !== 'radio').length + radioNames.size;
+    const filledOther = fields.filter(f => f.type !== 'radio' && f.type !== 'checkbox' && f.value.trim()).length;
+    const filledCb = fields.filter(f => f.type === 'checkbox' && f.checked).length;
     const checkedRadios = [...radioNames].filter(n => document.querySelector(`input[name="${n}"]:checked`)).length;
-    const filledOther = [...fields].filter(f=>f.type!=='radio' && f.type!=='checkbox' && f.value.trim()).length;
-    const filledCb = [...fields].filter(f=>f.type==='checkbox' && f.checked).length;
     const pct = Math.round(((filledOther + checkedRadios + filledCb) / total) * 100);
     document.getElementById('progress-bar').style.width = pct + '%';
   }
   document.getElementById('screen-form').addEventListener('input', updateProgress);
   document.getElementById('screen-form').addEventListener('change', updateProgress);
 
-  // ── Validation ────────────────────────────────────────────────────────
+  // Validation
   function showErr(id, show) {
     const el = document.getElementById('err-' + id);
     if (el) el.style.display = show ? 'block' : 'none';
@@ -632,85 +514,66 @@
 
   function validate() {
     let ok = true;
+    const nameOk = document.getElementById('full-name').value.trim().length > 0;
+    markField('full-name', !nameOk); showErr('full-name', !nameOk); if (!nameOk) ok = false;
 
-    // Personal details
-    const name = document.getElementById('full-name');
-    if (!name.value.trim()) { markField('full-name', true); showErr('full-name', true); ok = false; }
-    else { markField('full-name', false); showErr('full-name', false); }
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value.trim());
+    markField('email', !emailOk); showErr('email', !emailOk); if (!emailOk) ok = false;
 
-    const email = document.getElementById('email');
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-    if (!emailOk) { markField('email', true); showErr('email', true); ok = false; }
-    else { markField('email', false); showErr('email', false); }
+    const phoneOk = document.getElementById('phone').value.trim().length > 0;
+    markField('phone', !phoneOk); showErr('phone', !phoneOk); if (!phoneOk) ok = false;
 
-    const phone = document.getElementById('phone');
-    if (!phone.value.trim()) { markField('phone', true); showErr('phone', true); ok = false; }
-    else { markField('phone', false); showErr('phone', false); }
-
-    // Textareas q1–q3, q5–q7
     ['q1','q2','q3','q5','q6','q7'].forEach(id => {
-      const el = document.getElementById(id);
-      if (!el.value.trim()) { markField(id, true); showErr(id, true); ok = false; }
-      else { markField(id, false); showErr(id, false); }
+      const fieldOk = document.getElementById(id).value.trim().length > 0;
+      markField(id, !fieldOk); showErr(id, !fieldOk); if (!fieldOk) ok = false;
     });
 
-    // Radio q4
-    if (!document.querySelector('input[name="q4_yn"]:checked')) {
-      showErr('q4', true); ok = false;
-    } else { showErr('q4', false); }
+    if (!document.querySelector('input[name="q4_si_background"]:checked')) { showErr('q4', true); ok = false; }
+    else { showErr('q4', false); }
 
-    // Salary
     ['current-salary','expected-salary'].forEach(id => {
-      const el = document.getElementById(id);
-      if (!el.value.trim()) { markField(id, true); showErr(id, true); ok = false; }
-      else { markField(id, false); showErr(id, false); }
+      const fieldOk = document.getElementById(id).value.trim().length > 0;
+      markField(id, !fieldOk); showErr(id, !fieldOk); if (!fieldOk) ok = false;
     });
 
-    // Notice
-    if (!document.querySelector('input[name="notice"]:checked')) {
-      showErr('notice', true); ok = false;
-    } else { showErr('notice', false); }
+    if (!document.querySelector('input[name="notice_period"]:checked')) { showErr('notice', true); ok = false; }
+    else { showErr('notice', false); }
 
-    // PDPA
-    const pdpa = document.getElementById('pdpa-consent');
-    if (!pdpa.checked) { showErr('pdpa', true); ok = false; }
-    else { showErr('pdpa', false); }
+    const pdpaOk = document.getElementById('pdpa-consent').checked;
+    showErr('pdpa', !pdpaOk); if (!pdpaOk) ok = false;
 
     return ok;
   }
 
-  // ── Submit ────────────────────────────────────────────────────────────
+  // Submit — posts to Formspree via fetch, falls back to native POST
   document.getElementById('screen-form').addEventListener('submit', function(e) {
     e.preventDefault();
     if (!validate()) {
-      document.querySelector('.err-msg[style*="block"]')
-        ?.closest('.card, .pdpa')
-        ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const firstErr = document.querySelector('.err-msg[style*="block"]');
+      if (firstErr) firstErr.closest('.card, .pdpa')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
     const btn = document.getElementById('submit-btn');
     btn.disabled = true;
     btn.textContent = 'Submitting…';
 
-    // ── Replace the action URL below with your Formspree / Netlify / GitHub Forms endpoint ──
-    const formData = new FormData(this);
     fetch('https://formspree.io/f/mnjgkzkd', {
       method: 'POST',
-      body: formData,
+      body: new FormData(this),
       headers: { 'Accept': 'application/json' }
     })
-    .then(r => {
-      document.getElementById('screen-form').style.display = 'none';
-      document.getElementById('success-screen').style.display = 'block';
-      document.getElementById('progress-bar').style.width = '100%';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    .then(res => {
+      if (res.ok) {
+        document.getElementById('screen-form').style.display = 'none';
+        document.getElementById('success-screen').style.display = 'block';
+        document.getElementById('progress-bar').style.width = '100%';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        this.submit(); // fallback: native POST redirect
+      }
     })
     .catch(() => {
-      // Fallback: show success anyway for demo / static hosting
-      document.getElementById('screen-form').style.display = 'none';
-      document.getElementById('success-screen').style.display = 'block';
-      document.getElementById('progress-bar').style.width = '100%';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.submit(); // fallback: native POST redirect
     });
   });
 </script>
